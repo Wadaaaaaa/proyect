@@ -1,0 +1,96 @@
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; /* Agregamos position: relative para que el título sea un contenedor */
+  background-color: #ffffff;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.nav {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.footer {
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.box-image {
+  width: 298px;
+  height: 308px;
+  border: 1px solid #ffffff;
+  margin: 20px auto;
+  position: relative;
+}
+
+
+
+.box-image::before {
+  transform: rotate(45deg);
+}
+
+.box-image::after  {
+  transform: rotate(-45deg);
+}
+
+  .escuela.png{
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+  text-align: center;
+}
+
+
+
+.nav{
+  background-color: #ffffff;
+}
+
+.footer{
+  background-color: #ffffff;
+}
+
+.escuela.png{
+  top: 50%;
+  margin-top: auto;
+  margin-left: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: center;
+}

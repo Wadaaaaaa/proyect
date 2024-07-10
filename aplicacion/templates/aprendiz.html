@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block titulo %} Aprendiz {% endblock %}
+
+{% block contenido %} 
+
+
+ <a href="{% url 'agregar' %}">
+  <button>Nuevo Aprendiz</button>
+
+  <style>
+    button{
+      border: 1px solid black;
+      border-radius: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-color: rgb(34, 5, 61);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      padding: 10px;
+      margin-bottom: 15px ;
+    }
+  </style>
+  
+ </a>
+
+  <div class="form-group" >
+   <label for="datos">Datos</label>
+ </div>
+
+ <table class="table">
+   <thead>
+     <tr>
+       <th>ID</th>
+       <th>Nombre</th>
+       <th>Correo</th>
+       <th>Telefono</th>
+       <th>Editar</th>
+     </tr>
+   </thead>
+  
+   {% for Aprendiz in aprendiz %}
+   <tr>
+     <td>{{ Aprendiz.id }}</td>
+     <td>{{ Aprendiz.nombre }}</td>
+     <td>{{ Aprendiz.correo }}</td>     
+     <td>{{ Aprendiz.telefono }}</td>
+    
+  
+      <td>
+        <a name="" id="" class="btn btn-info" href="{% url 'editar' Aprendiz.id %}" role="button">Editar</a>
+        |
+        <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' Aprendiz.id %}" role="button">Borrar</a>
+      </td>
+    </tr>
+     {% endfor %}
+  </table>
+  
+{% endblock %}

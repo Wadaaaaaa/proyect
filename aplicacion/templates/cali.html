@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block titulo %} Calificaciones {% endblock %}
+
+{% block contenido %} 
+
+  <h4> Informacion de las calificaciones de los Aprendices</h4>
+ </a>
+
+  <div class="form-group" >
+   <label for="datos">Datos</label>
+ </div>
+
+ <table class="table">
+   <thead>
+     <tr>
+       <th>ID</th>
+       <th>Id del Aprendiz</th>
+       <th>Id de competencia</th>
+       <th>Fecha</th>
+       <th>Descripcion</th>
+       <th>Nota</th>
+     </tr>
+   </thead>
+  
+   {% for Calificaciones in cali %}
+   <tr>
+     <td>{{ Calificaciones.id_cali }}</td>
+     <td>{{ Calificaciones.id }}</td>
+     <td>{{ Calificaciones.id_comp }}</td>     
+     <td>{{ Calificaciones.fecha_calificacion }}</td>
+     <td>{{ Calificaciones.descripcion }}</td>
+     <td>{{ Calificaciones.nota }}</td>
+  </tr>
+     {% endfor %}
+  </table>
+  
+{% endblock %}
